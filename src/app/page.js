@@ -63,8 +63,8 @@ export default function HomePage() {
               alt="Decorative graphic"
               width={300}
               height={300}
-                className="object-contain"
-              />
+              className="object-contain opacity-75"
+            />
             </motion.div>
         </div>
       </section>
