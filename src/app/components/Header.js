@@ -1,25 +1,34 @@
-import Link from 'next/link';
+import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="bg-white shadow-md">
-      <nav className="container mx-auto flex items-center justify-between py-4 px-6">
-        <Link href="/" className="text-2xl font-bold text-green-600">
-          FFA
-        </Link>
-        <div className="flex space-x-8">
-          <Link href="/about" className="text-gray-800 hover:text-green-600">
-            About
-          </Link>
-          <Link href="/events" className="text-gray-800 hover:text-green-600">
-            Upcoming Events
-          </Link>
-          <Link href="/newsletters" className="text-gray-800 hover:text-green-600">
-            Newsletters
+    <header className="absolute inset-x-0 top-0 z-20 bg-transparent backdrop-blur-sm">
+      <nav className="relative container mx-auto px-6 py-4 flex items-center">
+        {/* Left: logo, aligned with body text */}
+        <div className="flex-1">
+          <Link href="/" className="text-2xl font-bold text-white">
+            FFA
           </Link>
         </div>
-        <div className="flex items-center space-x-4">
-          <Link href="/login" className="text-gray-800 hover:text-green-600">
+
+        {/* Center: main links, perfectly centered */}
+        <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="flex space-x-8">
+            <Link href="/about" className="text-white hover:text-green-300">
+              About
+            </Link>
+            <Link href="/events" className="text-white hover:text-green-300">
+              Upcoming Events
+            </Link>
+            <Link href="/newsletters" className="text-white hover:text-green-300">
+              Newsletters
+            </Link>
+          </div>
+        </div>
+
+        {/* Right: actions, aligned symmetrically */}
+        <div className="flex-1 flex items-center justify-end space-x-4">
+          <Link href="/login" className="text-white py-2 hover:text-green-300">
             Login
           </Link>
           <Link
@@ -31,5 +40,5 @@ export default function Header() {
         </div>
       </nav>
     </header>
-  );
+  )
 }
