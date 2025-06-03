@@ -42,7 +42,7 @@ export default function Header() {
                 Courses
               </Link>
             </motion.div>
-            <Link href="#newsletter" className="text-white hover:text-green-300">
+            <Link href="#newsletters" className="text-white hover:text-green-300">
               Newsletter
             </Link>
             <Link href="#events" className="text-white hover:text-green-300">
@@ -59,7 +59,7 @@ export default function Header() {
           </Link>
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5, ease: 'easeOut', delay: 0.3 }}>
             <Link
-              href="/signup"
+              href="/register"
               className="bg-green-600 text-white py-2 px-4 rounded-full hover:bg-green-700"
             >
               Sign Up
